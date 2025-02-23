@@ -52,7 +52,6 @@ class EventApp:
     def update_label(self, text):
         self.event_label.config(text=text)
 
-
 if __name__ == "__main__":
     root = tk.Tk()
     app = EventApp(root)
