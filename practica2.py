@@ -5,14 +5,13 @@ from tkinter import Label
 class EventApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Eventos con Tkinter")
+        self.root.title("Estos son los eventos con sus coordenadas")
         self.root.geometry("500x500")
 
-        self.event_label = Label(self.root, text="Eventos se mostrarán aquí", bg="white", fg="black",
+        self.event_label = Label(self.root, text="Aqui se mostrarán los eventos", bg="white", fg="black",
                                  font=("Arial", 12), wraplength=450)
         self.event_label.pack(pady=20, fill="both", expand=True)
 
-        # Asociar eventos de mouse y teclado
         self.root.bind("<Button-1>", self.mouse_click)
         self.root.bind("<Button-2>", self.mouse_middle_click)
         self.root.bind("<Button-3>", self.mouse_right_click)
@@ -54,7 +53,6 @@ class EventApp:
         self.event_label.config(text=text)
 
 
-# Ejecutar aplicación
 if __name__ == "__main__":
     root = tk.Tk()
     app = EventApp(root)
